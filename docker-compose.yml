@@ -2,7 +2,7 @@
 services:
   web:
     # 镜像按摘要固定（多架构镜像写清单列表的摘要），标签只给人看。
-    image: ghcr.io/geraldpeng6/publish-test-web:0.2.0
+    image: ghcr.io/geraldpeng6/publish-test-web:0.2.0@sha256:e20f5d97c1ea5ada84fbcf31707768d35b20e4687b3baaac7117cd640992f203
     environment:
       # 网关代登录：SSI 回显的 Remote-User 只信核心带来的。官方镜像启动时对 templates 目录里的
       # *.template 做 envsubst，把下面的地址换进 nginx 配置（见 web/default.conf.template）。
